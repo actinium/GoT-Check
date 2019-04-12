@@ -1,4 +1,4 @@
-var session = pl.create();
+var session = pl.create(1000);
 session.consult( "got.pl" );
 
 session.query( "parent(rickard_stark, X)." );
