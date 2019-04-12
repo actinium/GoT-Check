@@ -23,9 +23,11 @@ function run_query(){
 
 var callback = function(x){
 	if(!x){
-		var element = document.createElement('p');
-		element.innerText = pl.format_answer(x);
-		result.appendChild(element);
+		if(!result.firstChild){
+			var element = document.createElement('p');
+			element.innerText = pl.format_answer(x);
+			result.appendChild(element);
+		}
 		return;
 	}
 	var element = document.createElement('p');
